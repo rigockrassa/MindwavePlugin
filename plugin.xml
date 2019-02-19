@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-MindwavePlugin" version="0.0.1">
+    <name>MindwavePlugin</name>
+
+    <description>An Android Cordova plugin that allows users to display mindwave stream.</description>
+    <license>MIT</license>
+
+    <keywords>cordova,android,mindwave,neurosky</keywords>
+    <repo>https://github.com/rigockrassa/MindwavePlugin/Mindwave-PhoneGap-Plugin.git</repo>
+    <issue>https://github.com/rigockrassa/MindwavePlugin/issues</issue>
+  
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+  
+    <js-module src="www/MindwavePlugin.js" name="MindwavePlugin">
+        <clobbers target="window.plugins.MindwavePlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="MindwavePlugin">
+                <param name="android-package" value="com.rigockrassa.cordova.plugin.MindwavePlugin"/>
+            </feature>
+        </config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="android.permission.BLUETOOTH" />
+			<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+		</config-file>
+
+        <source-file src="src/android/MindwavePlugin.java" target-dir="src/com/rigockrassa/cordova/plugin" />
+        <source-file src="src/android/libs/arm64-v8a/libNskAlgo.so" target-dir="jniLibs/arm64-v8a/" />
+        <source-file src="src/android/libs/armeabi/libNskAlgo.so" target-dir="jniLibs/armeabi/" />
+        <source-file src="src/android/libs/armeabi/libNSUART.so" target-dir="jniLibs/armeabi/" />
+        <source-file src="src/android/libs/armeabi-v7a/libaacdecoder.so" target-dir="jniLibs/armeabi-v7a/" />
+        <source-file src="src/android/libs/mips/libNskAlgo.so" target-dir="jniLibs/mips/" />
+        <source-file src="src/android/libs/mips64/libNskAlgo.so" target-dir="jniLibs/mips64/" />
+        <source-file src="src/android/libs/x86/libNskAlgo.so" target-dir="jniLibs/x86/" />
+        <source-file src="src/android/libs/x86_64/libNskAlgo.so" target-dir="jniLibs/x86_64/" />
+        <source-file src="src/android/libs/libStreamSDK.jar" target-dir="libs/" />
+        <source-file src="src/android/libs/NskAlgoSdk.jar" target-dir="libs/" />
+    </platform>
+</plugin>

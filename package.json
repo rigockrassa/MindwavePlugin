@@ -1,0 +1,35 @@
+{
+  "name": "cordova-plugin-MindwavePlugin",
+  "version": "0.0.1",
+  "description": "An Android Cordova plugin that allows users to get stream mindwave.",
+  "cordova": {
+    "id": "cordova-plugin-MindwavePlugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rigockrassa/MindwavePlugin.git"
+  },
+  "keywords": [
+    "Mindwave",
+    "Notification",
+    "Message",
+    "Alert",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Otto Ockrassa <rigockrassa@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rigockrassa/MindwavePlugin/issues"
+  },
+  "homepage": "https://github.com/rigockrassa/MindwavePlugin/"
+}
